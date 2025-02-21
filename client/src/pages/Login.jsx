@@ -54,7 +54,7 @@ const Login = () => {
         <Box
           sx={{
             width: { xs: "90%", sm: 400 },
-            bgcolor: "rgba(255, 255, 255, 0.8)",
+            bgcolor: "rgba(255, 255, 255, 0.9)",
             p: { xs: 2, sm: 4 },
             borderRadius: 2,
             boxShadow: 3,
@@ -75,8 +75,8 @@ const Login = () => {
           <Button variant="contained" color="primary" fullWidth sx={{ mb: 2 }}>
             Continue
           </Button>
-          <Typography variant="body2" sx={{ mb: 1 }}>
-            Or continue with
+          <Typography variant="body2" sx={{ mb: 1, color: "black" }}>
+            OR
           </Typography>
           <Button variant="outlined" color="secondary" fullWidth sx={{ mb: 2 }}>
             Facebook

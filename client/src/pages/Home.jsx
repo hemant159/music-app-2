@@ -1,11 +1,13 @@
-import React from 'react'
+// src/App.jsx
+import React from 'react';
+import { Box } from '@mui/material';
+import SideNav from '../components/SideNav';
+import Dashboard from '../components/Dashboard';
 
-const Home = () => {
+const App = () => {
   return (
-    <div>
-      hi there form Home
-    </div>
-  )
-}
+     <Dashboard />
+  );
+};
 
-export default Home
+export default App;
