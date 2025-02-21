@@ -9,7 +9,7 @@ import MusicPlayer from "./MusicPlayer";
 import SongModal from "./SongModal";
 
 const Dashboard = () => {
-  // Sample trending data for the first column. Note the added "audioSrc" for each track.
+  
   const trendingData = [
     {
       id: 1,
@@ -37,7 +37,7 @@ const Dashboard = () => {
     },
   ];
 
-  // State for modal control
+
   const [selectedTrack, setSelectedTrack] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -49,10 +49,10 @@ const Dashboard = () => {
   return (
     <Box sx={{ display: "flex", flexDirection: "column", height: "100vh", bgcolor: "black" }}>
       <Box sx={{ display: "flex", flexGrow: 1 }}>
-        {/* Left Navigation Bar */}
+        
         <SideNav />
 
-        {/* Main Content Area */}
+       
         <Box
           sx={{
             flexGrow: 1,
@@ -156,17 +156,15 @@ const Dashboard = () => {
             </Box>
           </Box>
 
-          {/* Second (Narrower) Column */}
           <Box sx={{ width: { xs: "100%", md: "30%" }, p: 2, bgcolor: "black", height: "100%" }}>
             <SecondColumn />
           </Box>
         </Box>
       </Box>
 
-      {/* Sticky Bottom Music Player */}
+    
       <MusicPlayer />
 
-      {/* Song Modal */}
       <SongModal open={modalOpen} onClose={() => setModalOpen(false)} track={selectedTrack} />
     </Box>
   );

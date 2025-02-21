@@ -1,4 +1,4 @@
-// src/components/SongModal.jsx
+
 import React, { useRef, useState, useEffect } from 'react';
 import {
   Dialog,
@@ -93,7 +93,7 @@ const SongModal = ({ open, onClose, track }) => {
       <DialogContent dividers>
         {track && (
           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>
-            {/* Video Display in a Square Frame */}
+            
             <Box
               component="video"
               autoPlay
@@ -111,7 +111,7 @@ const SongModal = ({ open, onClose, track }) => {
               }}
               controls={false}
             />
-            {/* Audio Player Controls */}
+           
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, width: '100%' }}>
               <IconButton onClick={togglePlayPause} sx={{ color: 'black' }}>
                 {isPlaying ? <PauseIcon fontSize="large" /> : <PlayArrowIcon fontSize="large" />}

@@ -18,7 +18,6 @@ const MusicPlayer = () => {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
 
-  // Replace with your actual audio file link
   const audioSrc = "https://adbooks2.s3.ap-south-1.amazonaws.com/music/video1.mp3";
 
   const togglePlayPause = () => {

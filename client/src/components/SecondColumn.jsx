@@ -37,7 +37,7 @@ const SecondColumn = () => {
         gap: 2,
       }}
     >
-      {/* Row 1: Notification & Search */}
+     
       <Box
         sx={{
           display: "flex",

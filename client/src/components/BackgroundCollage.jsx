@@ -1,11 +1,9 @@
-// src/components/BackgroundCollage.jsx
+
 import { Box, useTheme } from "@mui/material";
 
 const BackgroundCollage = ({ videos = [] }) => {
   const theme = useTheme();
 
-  // Define a set of grid sizes for a "portrait" effect.
-  // Here each cell occupies 1 column, and row spans vary to create a taller appearance.
   const gridSizes = [
     { col: 1, row: 2 },
     { col: 1, row: 3 },
@@ -15,7 +13,6 @@ const BackgroundCollage = ({ videos = [] }) => {
     { col: 1, row: 3 },
     { col: 1, row: 2 },
     { col: 1, row: 3 },
-    // You can add or adjust patterns as desired.
   ];
 
   return (
@@ -26,20 +23,20 @@ const BackgroundCollage = ({ videos = [] }) => {
         left: 0,
         width: "100%",
         height: "100%",
-        zIndex: -1, // Ensure collage stays behind other content
+        zIndex: -1, 
         overflow: "hidden",
       }}
     >
       <Box
         sx={{
           display: "grid",
-          // Adjust columns based on screen size
+          
           gridTemplateColumns: {
             xs: "repeat(2, 1fr)",
             sm: "repeat(4, 1fr)",
             md: "repeat(6, 1fr)",
           },
-          // Increase row height so cells become more portrait (try 150px or adjust as needed)
+          
           gridAutoRows: "150px",
           gridAutoFlow: "dense",
           gap: "4px",
@@ -49,8 +46,6 @@ const BackgroundCollage = ({ videos = [] }) => {
       >
         {videos.map((videoSrc, index) => {
           const size = gridSizes[index % gridSizes.length];
-
-          // Check if the URL is an Instagram link and handle it as before.
           if (videoSrc.includes("instagram.com")) {
             let embedSrc = videoSrc;
             try {
