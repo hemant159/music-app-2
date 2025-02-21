@@ -6,7 +6,6 @@ import {
   DialogTitle,
   Box,
   IconButton,
-  Button,
   Slider,
   Typography,
 } from '@mui/material';
@@ -26,11 +25,9 @@ const SongModal = ({ open, onClose, track }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
-  const [showVideo, setShowVideo] = useState(false);
 
   useEffect(() => {
     if (open) {
-      setShowVideo(false);
       if (audioRef.current) {
         audioRef.current.pause();
         setIsPlaying(false);
@@ -65,10 +62,6 @@ const SongModal = ({ open, onClose, track }) => {
     }
   };
 
-  const handleToggleVideo = () => {
-    setShowVideo(!showVideo);
-  };
-
   return (
     <Dialog
       open={open}
@@ -77,7 +70,7 @@ const SongModal = ({ open, onClose, track }) => {
       fullWidth
       PaperProps={{
         sx: {
-          bgcolor: 'rgba(225, 225, 225, 0.1)', // semi-transparent black
+          bgcolor: 'rgba(225, 225, 225, 0.1)',
           color: 'white',
         },
       }}
@@ -96,37 +89,29 @@ const SongModal = ({ open, onClose, track }) => {
         >
           <CloseIcon />
         </IconButton>
-        {track?.videoSrc && (
-          <Box sx={{ mt: 2, textAlign: 'center' }}>
-            <Button variant="contained" size="small" onClick={handleToggleVideo}>
-              {showVideo ? "Show Image" : "Show Video"}
-            </Button>
-          </Box>
-        )}
       </DialogTitle>
       <DialogContent dividers>
         {track && (
           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>
-            {showVideo && track.videoSrc ? (
-              <Box
-                component="video"
-                // controls
-                autoPlay
-                muted
-                loop
-                ref={videoRef}
-                src={track.videoSrc}
-                alt={track.trackTitle}
-                sx={{ width: '100%', maxWidth: 300, borderRadius: 2 }}
-              />
-            ) : (
-              <Box
-                component="img"
-                src={track.img}
-                alt={track.trackTitle}
-                sx={{ width: '100%', maxWidth: 300, borderRadius: 2 }}
-              />
-            )}
+            {/* Video Display in a Square Frame */}
+            <Box
+              component="video"
+              autoPlay
+              muted
+              loop
+              ref={videoRef}
+              src={track.videoSrc}
+              alt={track.trackTitle}
+              sx={{
+                width: '100%',
+                maxWidth: 300,
+                height: 300,
+                objectFit: 'cover',
+                borderRadius: 2,
+              }}
+              controls={false}
+            />
+            {/* Audio Player Controls */}
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, width: '100%' }}>
               <IconButton onClick={togglePlayPause} sx={{ color: 'black' }}>
                 {isPlaying ? <PauseIcon fontSize="large" /> : <PlayArrowIcon fontSize="large" />}

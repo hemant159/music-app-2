@@ -36,11 +36,8 @@ const Login = () => {
           "https://adbooks2.s3.ap-south-1.amazonaws.com/video/video1.mp4",
           "https://adbooks2.s3.ap-south-1.amazonaws.com/video/video1.mp4",
           "https://adbooks2.s3.ap-south-1.amazonaws.com/video/video1.mp4",
-          // Add more video URLs as needed
         ]}
       />
-
-      {/* Login Form Container */}
       <Box
         sx={{
           minHeight: "100vh",
@@ -48,7 +45,7 @@ const Login = () => {
           alignItems: "center",
           justifyContent: "center",
           position: "relative",
-          zIndex: 1, // Ensure the form is above the background collage
+          zIndex: 1, 
         }}
       >
         <Box

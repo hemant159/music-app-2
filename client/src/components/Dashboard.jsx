@@ -13,7 +13,7 @@ const Dashboard = () => {
   const trendingData = [
     {
       id: 1,
-      trackTitle: "Haunt me",
+      trackTitle: "Fall in love with me",
       length: "00:19",
       img: "https://adbooks2.s3.ap-south-1.amazonaws.com/photos/img+2.jpg",
       audioSrc: "https://adbooks2.s3.ap-south-1.amazonaws.com/music/video1.mp3",
@@ -21,17 +21,19 @@ const Dashboard = () => {
     },
     {
       id: 2,
-      trackTitle: "Song Two",
-      length: "04:05",
+      trackTitle: "Haunt Me",
+      length: "00:13",
       img: "https://adbooks2.s3.ap-south-1.amazonaws.com/photos/img+3.jpg",
-      audioSrc: "https://example.com/your-audio-file-2.mp3",
+      audioSrc: "https://adbooks2.s3.ap-south-1.amazonaws.com/music/video4.mp3",
+      videoSrc: "https://adbooks2.s3.ap-south-1.amazonaws.com/video/video5.mp4"
     },
     {
       id: 3,
-      trackTitle: "Song Three",
+      trackTitle: "Aura",
       length: "02:45",
-      img: "https://adbooks2.s3.ap-south-1.amazonaws.com/photos/img.jpg",
-      audioSrc: "https://example.com/your-audio-file-3.mp3",
+      img: "https://i.ytimg.com/vi/ePaGCCRUPCQ/0.jpg",
+      audioSrc: "https://adbooks2.s3.ap-south-1.amazonaws.com/music/video7.mp3",
+      videoSrc: "https://adbooks2.s3.ap-south-1.amazonaws.com/video/video7.mp4"
     },
   ];
 
