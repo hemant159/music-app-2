@@ -6,7 +6,9 @@ import Dashboard from '../components/Dashboard';
 
 const App = () => {
   return (
-     <Dashboard />
+    <Box sx={{ width: '100%', height: '100vh', overflow: 'hidden' }} >
+      <Dashboard />
+    </Box>
   );
 };
 

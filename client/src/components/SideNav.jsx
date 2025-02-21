@@ -1,4 +1,3 @@
-// src/components/SideNav.jsx
 import React from 'react';
 import { Box, IconButton } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
@@ -10,7 +9,7 @@ const SideNav = () => {
   return (
     <Box
       sx={{
-        width: '60px', // fixed width for nav bar
+        width: { xs: '50px', md: '60px' },
         height: '100%',
         bgcolor: 'red',
         display: 'flex',
@@ -18,19 +17,18 @@ const SideNav = () => {
         alignItems: 'center',
         justifyContent: 'center',
         p: 1,
-        borderRadius: 1
       }}
     >
-      <IconButton sx={{ color: "#fff", mb: 2 }}>
+      <IconButton sx={{ color: '#fff', mb: 2 }}>
         <HomeIcon />
       </IconButton>
-      <IconButton sx={{ color: "#fff", mb: 2 }}>
+      <IconButton sx={{ color: '#fff', mb: 2 }}>
         <SearchIcon />
       </IconButton>
-      <IconButton sx={{ color: "#fff", mb: 2 }}>
+      <IconButton sx={{ color: '#fff', mb: 2 }}>
         <LibraryMusicIcon />
       </IconButton>
-      <IconButton sx={{ color: "#fff", mb: 2 }}>
+      <IconButton sx={{ color: '#fff', mb: 2 }}>
         <SettingsIcon />
       </IconButton>
     </Box>
